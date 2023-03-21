@@ -22,12 +22,11 @@ gulp.task('html',function(){
 gulp.task('css',function(){
     return gulp.src(['stage/css/**/*.css','stage/css/**/*.scss'])
     .pipe(sourcemaps.init())
-    .pipe(scss({
+    .pipe(sass({
         outputStyle: 'compressed'
-    }).on(console.error('error'))
-    )
-    .pipe(autoprefixer())
+    }))
     .pipe(concat('main.css'))
+    .pipe(autoprefixer())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./dist/css'))
     .pipe(livereload())
