@@ -3,9 +3,6 @@
     margin: 0;
     padding: 0;
 }
-body {
-    font-family: 'Courier New', Courier, monospace;
-}
 .page {
     @include flex;
     min-height: 100vh;
