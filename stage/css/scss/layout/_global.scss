@@ -6,10 +6,14 @@
 .page {
     @include flex;
     min-height: 100vh;
+    background-color: $main-color;
     .content-area{
         transition: 0.3s;
         will-change: width;
         width: 100%;
     }
+}
+a {
+    text-decoration: none;
 }
 

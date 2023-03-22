@@ -1,2 +1,26 @@
-.sidebar sidebar
+.sidebar 
+    .logo.text-center Elsayed Hassan
+    ul.links.list-unstyled
+        li: a(href="#") Home Page 
+        li 
+            a(href="#") Forms 
+                i(
+                    class="fa-solid fa-arrow-right togglemenu"
+                    data-cont=".one")
+            ul.child-links.list-unstyled.one
+                li: a(href="#") Input   
+                li: a(href="#") CheckBox  
+                li: a(href="#") TextArea  
+                li: a(href="#") Radio  
+        li 
+            a(href="#") Misc 
+                i(
+                    class="fa-solid fa-arrow-right togglemenu"
+                    data-cont=".two")
+            ul.child-links.list-unstyled.two
+                | 
+                li: a(href="#") Loading  
+                li: a(href="#") Bradcrumps  
+        
+
 

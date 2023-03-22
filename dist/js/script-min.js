@@ -1,1 +1,1 @@
-document.querySelector("i.fa-solid.fa-right-left").addEventListener("click",()=>{document.querySelector(".sidebar").classList.toggle("no-sidebar")});
+document.querySelector("i.fa-solid.fa-right-left").addEventListener("click",()=>{document.querySelector(".sidebar").classList.toggle("no-sidebar")});let togglebtn=Array.from(document.querySelectorAll(".togglemenu"));togglebtn.forEach(e=>{e.addEventListener("click",e=>{e.currentTarget.classList.toggle("down"),document.querySelector(e.currentTarget.dataset.cont).classList.toggle("open")})});
