@@ -1,2 +1,50 @@
 .header 
-    i.fa-solid.fa-right-left.toggle-sidebar
+    i.fa-solid.fa-right-left.toggle-sidebar.header-icon
+    .dropdown.notification-container
+        i.fa-solid.fa-bell.notification-toggle.header-icon#dropdownMenuButton1(data-bs-toggle='dropdown' aria-expanded='false')
+        .dropdown-menu(aria-labelledby='dropdownMenuButton1')
+            .noti-head 
+                h5 Notification
+                span 50
+            .noti-content 
+                ul.list-unstyled 
+                    li 
+                        i.fa-solid.fa-envelope
+                        |You Got Email From One
+                    li     
+                        i.fa-solid.fa-money-bill
+                        | You Got Cash From Two 
+                    li            
+                        i.fa-solid.fa-thumbs-up
+                        | You Got Like From Three
+                    li 
+                        i.fa-sharp.fa-solid.fa-star
+                        | You Got Star From
+            .noti-foot.text-center
+                a(href="#") View All Notifications 
+    i.fa-solid.fa-up-right-and-down-left-from-center.header-icon.fullscreen-toggle
+    .dropdown.user-container
+        .user-name.notification-toggle#dropdownMenuButton2(data-bs-toggle='dropdown' aria-expanded='false')
+            img.rounded-circle.me-1(src="imgs/avatar.png", alt="")
+            span.me-1  Elsayed Hassan 
+            i.fa-solid.fa-arrow-down
+        .dropdown-menu(aria-labelledby='dropdownMenuButton2')
+            .user-info
+                h3 Elsayed Hassan 
+                p.text-black-50 Premium Member 
+            ul.list-unstyled.user-list.pb-3
+                li You Get A Comment on Your Post on Facebook
+                li You Get A Comment on Your Post on Facebook
+                li You Get A Comment on Your Post on Facebook
+                li You Get A Comment on Your Post on Instgram
+                li You Get A Comment on Your Post on Tweeter
+            .row.user-links 
+                .col 
+                    i.fa-solid.fa-gear
+                    span Settings
+                .col 
+                    i.fa-solid.fa-user
+                    span Profile 
+                .col 
+                    i.fa-solid.fa-power-off
+                    span Sign Out 

@@ -1,5 +1,132 @@
 .header {
+    @include flex;
+    padding: 20px;
+    align-items: center;
+    background-color: #fff;
+    gap: 15px;
+    .header-icon {
+        padding: 10px;
+        background-color: $main-color;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        @include flex-center;
+        
+        cursor: pointer;
+    }
     .toggle-sidebar {
         cursor: pointer;
+    }
+    .notification-container {
+        .dropdown-menu {
+            border: none;
+            min-width: 500px;
+            background-color: $main-color;
+            padding: 10px;
+            border: 1px solid $secondary-color;
+            &::before {
+                content: '';
+                position: absolute;
+                top: -21px;
+                left: 10px;
+                border-style: solid;
+                border-width: 10px;
+                border-color: transparent;
+                border-bottom-color: $secondary-color;
+            }
+            .noti-head {
+                @include flex-between;
+                span {
+                    color: $secondary-color;
+                }
+            }
+            .noti-content {
+                i {
+                    margin-right: 10px;
+                    color: $secondary-color;
+                }
+            }
+            .noti-foot {
+                a {
+                    color: $secondary-color;
+                    padding: 10px 0;
+                    display: block;
+                    border-top: 1px solid $secondary-color;
+                    @include smooth;
+                }
+                &:hover {
+                    color: $secondary-color-alt;
+                }
+            }
+        }
+    }
+    .user-container {
+        margin-left: auto;
+        cursor: pointer;
+        .user-name {
+            img {
+                width: 40px;
+                height: 40px;
+            }
+            span {
+                color: $secondary-color;
+            }
+            i {
+                color: $secondary-color;
+            }
+        }
+        .dropdown-menu {
+            border: none;
+            min-width: 500px;
+            background-color: $main-color;
+            padding: 10px;
+            border: 1px solid $secondary-color;
+            &::before {
+                content: '';
+                position: absolute;
+                top: -21px;
+                right: 30px;
+                border-style: solid;
+                border-width: 10px;
+                border-color: transparent;
+                border-bottom-color: $secondary-color;
+            }
+            .user-info {
+                border-bottom: 1px solid $secondary-color;
+                h3 {
+                    color: $secondary-color;
+                    font-weight: bold;
+                }
+                padding: 5px;
+            }
+            .user-list {
+                margin-top: 15px;
+                border-bottom: 1px solid $secondary-color;
+                li {
+                    padding: 5px;
+                }
+            }
+            .user-links {
+                padding: 10px;
+                .col {
+                    padding: 5px;
+                    &:not(:last-of-type) {
+                        margin-right: 5px;
+                    }
+                    i {
+                        margin-right: 15px;
+                        &.fa-gear {
+                            color: #0400ff;
+                        }
+                        &.fa-user {
+                            color: #00ff80;
+                        }
+                        &.fa-power-off {
+                            color: #ff0000;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

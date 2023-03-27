@@ -3,6 +3,12 @@
     margin: 0;
     padding: 0;
 }
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+a {
+    text-decoration: none;
+}
 .page {
     @include flex;
     min-height: 100vh;
@@ -13,7 +19,12 @@
         width: 100%;
     }
 }
-a {
-    text-decoration: none;
+.main-title {
+    width: fit-content;
+    border-bottom: 2px solid $secondary-color;
+    .page-title {
+        color: $secondary-color;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
 }
-
