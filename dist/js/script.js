@@ -49,3 +49,11 @@ function openFullscreen() {
 //     elem.msExitFullscreen();
 //   }
 // }
+
+//show hide setting box
+document.querySelector(".setting-box i").addEventListener("click", (e)=>{
+  //Make gear rotate
+  e.currentTarget.classList.toggle("fa-spin");
+  //open the box
+  document.querySelector(".setting-box").classList.toggle("hide");
+})
