@@ -15,8 +15,29 @@
         top: 90px;
         padding: 10px;
         background-color: $secondary-color;
+        cursor: pointer;
     }
     &.hide {
         right: -250px;
     }
+    .option-box {
+        h4 {
+            color: $main-color;
+            font-weight: bold;
+            border-bottom: 1px solid $main-color;
+            padding-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        .colors-option {
+            ul {
+                $colors : #16a085,#2980b9,#c0392b;
+                @for $i from 1 through length($colors) {
+                li:nth-child(#{$i}) {
+                    background-color: nth($list: $colors, $n: $i);
+                    }
+            }
+        }
+    }
+    }
+    
 }

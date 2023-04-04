@@ -2,8 +2,12 @@
     .toggle-setting 
         i.fa-solid.fa-gear
     .setting-content 
-        .option-box 
+        - var themes = ["green-theme","blue-theme","red-theme"]
+        .option-box.colors-option
             h4 Colors Option
+            ul.list-unstyled
+                each theme in themes 
+                    li(data-theme=theme)
         .option-box 
             h4 Colors Option
         .option-box 
