@@ -1,4 +1,3 @@
-
 //show hide side bar
 document.querySelector("i.fa-solid.fa-right-left").addEventListener("click",()=>{
     document.querySelector(".sidebar").classList.toggle("no-sidebar");
@@ -56,4 +55,21 @@ document.querySelector(".toggle-setting").addEventListener("click", (e)=>{
   document.querySelector(".toggle-setting i").classList.toggle("fa-spin");
   //open the box
   document.querySelector(".setting-box").classList.toggle("hide");
+})
+
+//chang theme
+var toggleClasses= [];
+document.querySelectorAll('.colors-option li').forEach((e)=>{
+  toggleClasses.push(e.dataset.theme);
+})
+var themeToggle = Array.from(document.querySelectorAll('.colors-option li'))
+themeToggle.forEach((e)=>{
+  e.addEventListener("click", (el)=>{
+    document.body.classList.remove(...toggleClasses);
+    document.body.classList.add(el.currentTarget.dataset.theme);
+    document.querySelectorAll('.colors-option li').forEach((e)=>{
+      e.classList.remove("active")
+    })
+    el.currentTarget.classList.add("active")
+  })
 })

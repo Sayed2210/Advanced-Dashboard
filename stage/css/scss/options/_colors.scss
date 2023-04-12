@@ -3,7 +3,7 @@ $themes: (
         color: #16a085 
     ),
     blue-theme: (
-        color: #2980b9 
+        color: #19A7CE 
     ),
     red-theme: (
         color: #c0392b 
@@ -11,7 +11,7 @@ $themes: (
 );
 @each $theme,$map in $themes {
     .#{$theme} {
-        .class-name {
+        .main-title .page-title {
             color: map-get($map: $map, $key: color);
         }
     }
