@@ -32,15 +32,15 @@
     .colors-option {
         ul {
             @include flex-center;
-            gap: 15px;
-            $colors : #16a085,#2980b9,#c0392b;
+            gap: 5px;
+            $colors : #16a085,#2980b9,#c0392b,#8e44ad;
             @for $i from 1 through length($colors) {
             li:nth-child(#{$i}) {
                 background-color: nth($list: $colors, $n: $i);
                 }
             li {
-                width: 24px;
-                height: 24px;
+                width: 20px;
+                height: 20px;
                 cursor: pointer;
                 opacity: .6;
                 &.active {

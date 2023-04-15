@@ -7,12 +7,22 @@ $themes: (
     ),
     red-theme: (
         color: #c0392b 
+    ),
+    purple-theme: (
+        color: #8e44ad 
     )
 );
 @each $theme,$map in $themes {
     .#{$theme} {
+        $color: map-get($map: $map, $key: color);
         .main-title .page-title {
-            color: map-get($map: $map, $key: color);
+            color: $color;
+        }
+        .header .user-container .user-name span {
+            color: $color;
+        }
+        .header .user-container .dropdown-menu .user-info h3 {
+            color: $color;
         }
     }
 }
