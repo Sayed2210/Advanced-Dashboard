@@ -73,3 +73,13 @@ themeToggle.forEach((e)=>{
     el.currentTarget.classList.add("active")
   })
 })
+
+//change the font
+var fontsClasses= [];
+document.querySelectorAll('.fonts-option select option').forEach((e)=>{
+  fontsClasses.push(e.value);
+})
+document.querySelector('.fonts-option select').addEventListener("change", (el)=>{
+  document.body.classList.remove(...fontsClasses);
+  document.body.classList.add(el.currentTarget.value);
+})

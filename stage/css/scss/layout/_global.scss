@@ -3,7 +3,27 @@
     margin: 0;
     padding: 0;
 }
+$fonts: (
+    open-sans: (
+        font-family: 'Open Sans' 
+    ),
+    comme: (
+        font-family: 'Comme'
+    ),
+    raleway: (
+        font-family: 'Raleway'
+    ),
+    roboto-mono: (
+        font-family: 'Roboto Mono'
+    )
+);
 body {
+    @each $font,$map in $fonts {
+        &.#{$font} {
+            $fon: map-get($map: $map, $key: font-family);
+            font-family: $fon, sans-serif;
+        }
+    }
     font-family: 'Open Sans', sans-serif;
 }
 a {

@@ -41,6 +41,9 @@
             &:hover {
                 padding-left: 25px;
             }
+            &::before.active {
+                background-color: #0d6efd;
+            }
             .togglemenu {
                 @include smooth;
             }

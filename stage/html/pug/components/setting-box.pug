@@ -8,7 +8,11 @@
             ul.list-unstyled
                 each theme in themes 
                     li(data-theme=theme class="rounded-circle")
-        .option-box 
-            h4 Colors Option
+        .option-box.fonts-option 
+            h4 Font Option
+            - var fonts=["open-sans","comme","raleway","roboto-mono"]
+            select.form-select
+                each font in fonts 
+                    option(value=font)=font + " Font"
         .option-box 
             h4 Colors Option
